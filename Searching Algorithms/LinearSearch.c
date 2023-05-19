@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// dizideki sayının kaçıncı sırada olduğunu dönen bir arama algoritmasıdır
+// It is an algorithm for sorting the numbers in an array from smallest to largest
 
 int main()
 {

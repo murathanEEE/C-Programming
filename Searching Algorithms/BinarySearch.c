@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// dizideki sayının kaçıncı sırada olduğunu dönen bir arama algoritmasıdır
-// linear search'e göre eleman arama işini zamandan tasarruf ederek daha hızlı yapar
-// belleği daha az yorarak arama yapar
+// It is a search algorithm that returns the position of a number in the array
+// Compares to the linear search algorithm, it saves time and makes searching for numbers faster.
+// Less memory fatigue
 
 int main()
 {
@@ -14,7 +14,7 @@ int main()
     scanf("%d", &n);
 
     int i,j,k,t;
-    int gecici;
+    int temp;
     int first,last,mid;
     int numbers[n];
 
@@ -34,16 +34,16 @@ int main()
     scanf("%d", &search);
 
     // binary search
-    // öncelikle diziyi küçükten büyüğe sıralamak gerekir
+    // First you need to sort the array from smallest to largest
     for (k=0; k<n-1; k++)
     {
         for (t=0; t<n-1-k; t++)
         {
             if (numbers[t] > numbers[t+1])
             {
-                gecici = numbers[t];
+                temp = numbers[t];
                 numbers[t] = numbers[t+1];
-                numbers[t+1] = gecici;
+                numbers[t+1] = temp;
             } 
         }
     }
@@ -75,7 +75,6 @@ int main()
     {
         printf("Entered number is not in the series!\n");
     }
-    
     
     return 0;
 }

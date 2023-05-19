@@ -12,7 +12,7 @@ int main()
     scanf("%d", &n);
 
     int i,j,k,t;
-    int gecici;
+    int temp;
     int numbers[n];
 
     srand(time(NULL));
@@ -34,9 +34,9 @@ int main()
         {
             if (numbers[t] > numbers[t+1])
             {
-                gecici = numbers[t];
+                temp = numbers[t];
                 numbers[t] = numbers[t+1];
-                numbers[t+1] = gecici;
+                numbers[t+1] = temp;
             }
         }
     }

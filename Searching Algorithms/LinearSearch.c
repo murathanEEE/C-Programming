@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// It is an algorithm for sorting the numbers in an array from smallest to largest
+// It is a search algorithm that returns the position of a number in the array
 
 int main()
 {

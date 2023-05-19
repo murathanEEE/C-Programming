@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// dizideki sayıları küçükten büyüğe sıralamaya yarayan bir algoritmadır
+// It is an algorithm for sorting the numbers in an array from smallest to largest
 
-void quickSort(int dizi[100], int first, int last)
+void quickSort(int numbers2[100], int first, int last)
 {
-    int gecici, pivot;
+    int temp, pivot;
     int i,j;
 
     if (first < last)
@@ -16,28 +16,28 @@ void quickSort(int dizi[100], int first, int last)
 
         while (i < j)
         {
-            while (dizi[i] <= dizi[pivot] && i < last)
+            while (numbers2[i] <= numbers2[pivot] && i < last)
             {
                 i++;
             }
-            while (dizi[j] > dizi[pivot])
+            while (numbers2[j] > numbers2[pivot])
             {
                 j--;
             }
             if (i<j)
             {
-                gecici = dizi[i];
-                dizi[i] = dizi[j];
-                dizi[j] = gecici;
+                temp = numbers2[i];
+                numbers2[i] = numbers2[j];
+                numbers2[j] = temp;
             }
         }
 
-        gecici = dizi[pivot];
-        dizi[pivot] = dizi[j];
-        dizi[j] = gecici;
+        temp = numbers2[pivot];
+        numbers2[pivot] = numbers2[j];
+        numbers2[j] = temp;
 
-        quickSort(dizi,first, last-1);
-        quickSort(dizi,j+1,last);
+        quickSort(numbers2,first, last-1);
+        quickSort(numbers2,j+1,last);
         
     }  
 }
@@ -50,8 +50,7 @@ int main()
     printf("Enter the number of values that will be sort:\n");
     scanf("%d", &n);
 
-    int i,j,k,t;
-    int konum;
+    int i,j;
     int numbers[n];
 
     srand(time(NULL));

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 // bubble sort algorithm sorts an array of numbers from smallest to largest
 

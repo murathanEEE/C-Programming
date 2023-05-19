@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// dizideki sayıları küçükten büyüğe sıralamaya yarayan bir algoritmadır
+// It is an algorithm for sorting the numbers in an array from smallest to largest
 
 int main()
 {
@@ -12,7 +12,7 @@ int main()
     scanf("%d", &n);
 
     int i,j,k,t;
-    int konum, gecici;
+    int position, temp;
     int numbers[n];
 
     srand(time(NULL));
@@ -30,20 +30,20 @@ int main()
     // selection sort
     for (k=0; k<n-1; k++)
     {
-        konum = k;
+        position = k;
         for (t=k+1; t<n; t++)
         {
-            if (numbers[konum] > numbers[t])  // işareti küçüktür yaparsak algoritma sayıları büyükten küçüğe doğru sıralar
+            if (numbers[position] > numbers[t])  // If we make the sign less than the algorithm sorts the numbers from largest to smallest
             {
-                konum = t;
+                position = t;
             }  
         }
 
-        if (konum != k)
+        if (position != k)
         {
-            gecici = numbers[k];
-            numbers[k] = numbers[konum];
-            numbers[konum] = gecici;
+            temp = numbers[k];
+            numbers[k] = numbers[position];
+            numbers[position] = temp;
         }   
     }
     

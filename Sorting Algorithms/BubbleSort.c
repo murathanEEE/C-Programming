@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// bubble sort algoritması bir dizi sayıyı küçükten büyüğe sıralamayı yapar
+// bubble sort algorithm sorts an array of numbers from smallest to largest
 
 int main()
 {

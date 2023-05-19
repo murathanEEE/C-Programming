@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 // It is an algorithm for sorting the numbers in an array from smallest to largest
 

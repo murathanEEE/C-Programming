@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// dizideki sayıları küçükten büyüğe sıralamaya yarayan bir algoritmadır
+// It is an algorithm for sorting the numbers in an array from smallest to largest
 
 void merge(int nums[100], int a, int mid, int b)
 {
@@ -48,7 +48,7 @@ void merge(int nums[100], int a, int mid, int b)
     }
 }
 
-void mergeSort(int dizi[100], int left, int right)
+void mergeSort(int nums2[100], int left, int right)
 {
     int m;
 
@@ -56,10 +56,10 @@ void mergeSort(int dizi[100], int left, int right)
     {
         m = left + (right - left) / 2;
 
-        mergeSort(dizi, left, m);
-        mergeSort(dizi, m + 1, right);
+        mergeSort(nums2, left, m);
+        mergeSort(nums2, m + 1, right);
 
-        merge(dizi, left, m, right);
+        merge(nums2, left, m, right);
     }
 
 }
